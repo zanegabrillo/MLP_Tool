@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import pickle
 import numpy as np
+import os
 
 # Load the model and encoder from the file
 with open('calorie_prediction_model.pkl', 'rb') as f:
@@ -8,7 +9,7 @@ with open('calorie_prediction_model.pkl', 'rb') as f:
 
 # Setup
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # This is needed for session to work
+app.secret_key = os.getenv('FLASK_SECRET_KEY', os.urandom(24))
 
 food_items = list(encoder.categories_[0])  # For dropdown
 
