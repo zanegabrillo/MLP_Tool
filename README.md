@@ -12,22 +12,24 @@
 </ul>
 
 
-Dataset
-The dataset used for this project contains information on the calories in various food items, listed per 100 grams. The data is sourced from the following Kaggle dataset:
+<h2>Dataset</h2>
+<p>The dataset used for this project contains information on the calories in various food items, listed per 100 grams. The data is sourced from the following Kaggle dataset:</p>
+<p>Dataset URL: <a href="https://www.kaggle.com/datasets/kkhandekar/calories-in-food-items-per-100-grams?resource=download">Calories in Food Items per 100 grams</a></p>
 
-Dataset URL: Calories in Food Items per 100 grams
+<h2>Technologies Used</h2>
+<ul>
+  <li>Backend: Python (Flask)</li>
+  <li>Frontend: HTML, CSS, JavaScript</li>
+  <li>Database: In-memory data structure (or optional database setup if extended)</li>
+  <li>Deployment: Render</li>
+</ul>
 
-The dataset includes columns such as:
+<p>Link for the Live App</p>
+<a href="https://calorie-prediction-ca0g.onrender.com">Calorie Prediction App</a>
 
-Food Item
 
-Calories per 100 grams
 
-Technologies Used
-Backend: Python (Flask)
 
-Frontend: HTML, CSS, JavaScript
 
-Database: In-memory data structure (or optional database setup if extended)
 
-Deployment: Render, or another cloud platform for hosting
+
