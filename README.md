@@ -27,6 +27,20 @@
 <p>Link for the Live App</p>
 <a href="https://calorie-prediction-ca0g.onrender.com">Calorie Prediction App</a>
 
+<h2>Future Improvements 🚀</h2>
+<p>If this project were to be developed further, the following enhancements are planned:</p>
+<ul>
+  <li>User Authentication: Allow users to register and log in to their own accounts.</li>
+  <li>Persistent History Tracking: Store each user’s food intake history in a database to help them monitor their daily/weekly calorie consumption.</li>
+  <li>Nutritional Analytics: Provide visual summaries (graphs/charts) showing nutrition breakdown over time.</li>
+  <li>Meal Planning: Suggest healthy combinations based on daily limits or goals (e.g., weight loss, maintenance, etc.).</li>
+  <li>Mobile Responsiveness: Improve UI for better experience on smartphones and tablets.</li>
+  <li>Custom Food Items: Let users add custom food entries with personalized calorie data.</li>
+</ul>
+
+
+
+
 
 
 
