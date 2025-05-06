@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+<body>
+    <h1>Food Calorie Estimator</h1>
+
+    <form method="POST" onsubmit="return validateForm()">
+        <label for="food">Food Item:</label>
+        <select name="food" id="food">
+            {% for item in food_items %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="grams">Grams:</label>
+        <input type="text" name="grams" id="grams" required placeholder="Enter number of grams (e.g., 100)">
+
+        <button type="submit" name="action" value="add">Add Food</button>
+    </form>
+
+    <!-- Modal for error message -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage"></p>
+            <button class="modal-button" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <div id="food-taken" class="{% if food_entries %}show{% endif %}">
+        <h2 style="color:#4CAF50;">Food Taken</h2>
+        <ul>
+            {% for food_name, grams in food_entries %}
+                <li>
+                    <span>* {{ food_name }} - {{ grams }} grams</span>
+                    <form method="POST" class="remove-form">
+                        <input type="hidden" name="action" value="remove">
+                        <input type="hidden" name="remove_index" value="{{ loop.index0 }}">
+                        <button class="remove-btn" type="submit">Remove</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if prediction %}
+        <h3>Total Calories: {{ prediction }}</h3>
+    {% endif %}
+
+    {% if error_message %}
+        <p style="color:red;">{{ error_message }}</p>
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
